@@ -1,0 +1,492 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    letter-spacing: 0.5px;
+}
+
+p {
+    line-height: 1.6195;
+}
+
+body,
+html {
+    overflow-x: hidden;
+    background-color: #000000;
+}
+
+
+@media screen and (min-width: 1600px) {
+    .banner-container-wrapper {
+        max-width: 1440px;
+        margin: auto;
+    }
+}
+
+.banner-grid-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+
+.vertical-scroll-img-carousel {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.img-container {
+    overflow: hidden;
+    height: 700px;
+}
+
+.banner-grid-row>div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+    padding: 40px 80px;
+}
+
+.banner-grid-row>div>h1 {
+    font-size: 82px;
+    color: white;
+    font-family: 'Montserrat';
+}
+
+.banner-grid-row>div>p {
+    font-family: 'Montserrat';
+    font-size: 18px;
+    color: white;
+    line-height: 1.6195;
+    margin-top: 30px;
+}
+
+.banner-grid-row>div>button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: fit-content;
+    margin-top: 35px;
+}
+
+.sliding-background {
+    --imageHeight: 700px;
+    background: url("./Assets/Images/bannerimg1.png") repeat-y;
+    height: calc(var(--imageHeight) * 2);
+    animation: slide 9s linear infinite;
+}
+
+.sliding-background-sec {
+    --imageHeight: 700px;
+    background: url("./Assets/Images/bannerimg2.png") repeat-y;
+    height: calc(var(--imageHeight) * 2);
+    animation: slideSec 9s linear infinite;
+}
+
+
+@keyframes slide {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(calc(var(--imageHeight) * -1));
+    }
+}
+
+@keyframes slideSec {
+    from {
+        transform: translateY(calc(var(--imageHeight) * -1));
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .banner-grid-row {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+
+/* Horizontal Image Carousel */
+
+.img-container-horizontal {
+    overflow: hidden;
+    width: 3643px;
+    /* Adjust as needed */
+    height: 500px;
+    margin-bottom: 40px;
+    /* Adjust as needed */
+}
+
+.sliding-background-horizontal {
+    --imageWidth: 3643px;
+    /* Adjust to match the container width */
+    background: url("./Assets/Images/slider-group.png") repeat-x;
+    width: calc(var(--imageWidth) * 2);
+    height: 100%;
+    animation: slideH 9s linear infinite;
+}
+
+@keyframes slideH {
+    from {
+        transform: translateX(0px);
+    }
+
+    to {
+        transform: translateX(calc(var(--imageWidth) * -1));
+    }
+}
+
+.horizontal-carousel {
+    display: none;
+}
+
+
+@media screen and (max-width: 992px) {
+    .banner-grid-row>div:nth-child(2) {
+        display: none;
+    }
+
+    .horizontal-carousel {
+        display: block;
+    }
+}
+
+/* Horizontal Image Carousel */
+
+@media screen and (max-width: 640px) {
+    .banner-grid-row>div:nth-child(1) {
+        padding: 40px 40px;
+    }
+
+    .banner-grid-row>div>h1 {
+        font-size: 52px;
+    }
+}
+
+
+@media screen and (max-width: 640px) {
+    .banner-grid-row>div:nth-child(1) {
+        padding: 40px 20px;
+    }
+
+    .banner-grid-row>div>h1 {
+        font-size: 42px;
+    }
+}
+
+/* Button code */
+
+/* CSS */
+.button-92 {
+    --c: #fff;
+    /* text color */
+    background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p, 100%)/300% no-repeat,
+        #004dff;
+    /* background color */
+    color: #0000;
+    border: none;
+    transform: perspective(500px) rotateY(calc(20deg*var(--_i, -1)));
+    text-shadow: calc(var(--_i, -1)* 0.08em) -.01em 0 var(--c),
+        calc(var(--_i, -1)*-0.08em) .01em 2px #0004;
+    outline-offset: .1em;
+    transition: 0.3s;
+    font-family: 'Montserrat' !important;
+    font-size: 27px !important;
+    padding: 10px 40px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px;
+}
+
+.button-92:hover,
+.button-92:focus-visible {
+    --_p: 0%;
+    --_i: 1;
+}
+
+.button-92:active {
+    text-shadow: none;
+    color: var(--c);
+    box-shadow: inset 0 0 9e9q #0005;
+    transition: 0s;
+}
+
+.button-92 {
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0;
+    cursor: pointer;
+    padding: .1em .3em;
+}
+
+/* Button code */
+
+/* Benefits css starts here */
+.dark-bg {
+    background-color: #000;
+}
+
+
+.gradient-heading-bg {
+    position: relative;
+    padding: 100px 0px;
+}
+
+.erp-products{
+    padding: 40px 0px !important;
+}
+
+.gradient-heading-bg h2,
+.gradient-heading-bg h3 {
+    color: #008cba;
+    z-index: 9999;
+    font-family: 'Montserrat';
+    font-size: 48px;
+    font-weight: 800;
+}
+
+
+
+
+
+.gradient-heading-bg:before {
+    background: url('./half-circle-bg.png') no-repeat scroll bottom center;
+    background-size: cover;
+    content: "";
+    height: 250px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    filter: grayscale(100%);
+    opacity: 0.2;
+}
+
+.decode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    margin: auto;
+    padding: 0px 10px;
+}
+
+.works {
+    text-align: center;
+    z-index: 999;
+}
+
+.clearfix {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    max-width: 1280px;
+    margin: auto;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+
+.step-number {
+    background: rgb(255 255 255 / 5%);
+    height: 120px;
+    width: 120px;
+    line-height: 120px;
+    text-align: center;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    margin: 0px auto 15px;
+    font-size: 48px;
+    font-weight: 700;
+    font-style: italic;
+    color: #ffffff;
+}
+
+
+.step-title {
+    color: #008cba;
+    font-family: 'Montserrat';
+    font-weight: 800;
+    font-size: 24px;
+}
+
+.clearfix p {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: 'Montserrat';
+    margin-top: 10px;
+}
+
+.clearfixs p {
+    color: #ffffff;
+    font-size: 16px;
+    margin-top: 10px;
+    font-family: 'Montserrat';
+}
+
+.clearfixs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    padding: 60px 10px 100px 10px;
+}
+
+.manual {
+    display: none;
+}
+
+@media screen and (max-width: 1080px) {
+    .clearfix {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .clearfixs {
+        display: none;
+    }
+
+    .manual {
+        display: block;
+    }
+
+    .gradient-heading-bg h2 {
+        font-size: 30px;
+    }
+}
+
+
+@media screen and (max-width: 640px) {
+    .clearfix {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 20px 30px;
+    }
+
+    .clearfixs {
+        padding: 60px 30px 100px 30px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+.SERVICE {
+    background-color: #000000;
+    padding: 220px 10px 100px 10px;
+    position: relative;
+}
+
+.SERVICE::after {
+    background: url('./Assets/Images/bg-4.png') no-repeat scroll bottom center;
+    background-size: cover;
+    content: "";
+    height: 250px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    /* filter: grayscale(100%); */
+    opacity: 0.1;
+}
+
+
+.animate {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    max-width: 1280px;
+    margin: auto;
+    padding: 10px 10px;
+}
+
+.st-iconbox {
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 20px;
+    transition: all .4s ease;
+    border: 1px solid #ffffff35;
+    background-color: rgb(255 255 255 / 5%);
+}
+
+.st-iconbox .iconbox-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    width: 90px;
+    border: .5px solid #ffffff35;
+    border-radius: 50%;
+    background-color: rgb(255 255 255 / 5%);
+    margin: auto auto 28px;
+    transition: all .4s ease;
+}
+
+.st-iconbox:hover .iconbox-icon {
+    border: .5px solid #fec544;
+}
+
+.st-iconbox:hover .iconbox-icon img {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+.iconbox-icon img {
+    width: 52px;
+    filter: grayscale(1);
+    opacity: .35;
+    transition: inherit;
+}
+
+.st-iconbox h3 {
+    transition: all .4s ease;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fdfeff;
+    margin-bottom: 10px;
+    font-family: 'Montserrat';
+}
+
+.st-iconbox p {
+    font-size: 14px;
+    font-family: 'Montserrat';
+    color: #fdfeff;
+}
+
+
+.st-iconbox:hover h3 {
+    color: #fec544;
+    transition: all .4s ease;
+}
+
+@media screen and (max-width: 992px) {
+    .animate {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .animate {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+@media screen and (max-width: 568px) {
+    .animate {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Benefits css ends here */
