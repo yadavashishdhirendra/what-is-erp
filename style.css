@@ -108,6 +108,12 @@ html {
     }
 }
 
+@media screen and (max-width: 1080px) {
+    .banner-grid-row>div:nth-child(1) {
+        padding: 40px 30px;
+    }
+}
+
 @media screen and (max-width: 992px) {
     .banner-grid-row {
         grid-template-columns: repeat(1, 1fr);
@@ -244,8 +250,14 @@ html {
     padding: 100px 0px;
 }
 
-.erp-products{
+.erp-products {
     padding: 40px 0px !important;
+}
+
+@media screen and (max-width: 1080px) {
+    .gradient-heading-bg {
+        padding: 100px 0px 50px 0px;
+    }
 }
 
 .gradient-heading-bg h2,
@@ -370,7 +382,7 @@ html {
 
 @media screen and (max-width: 640px) {
     .clearfix {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         padding: 20px 30px;
     }
 
@@ -380,6 +392,11 @@ html {
     }
 }
 
+@media screen and (max-width: 598px) {
+    .clearfix {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
 
 .SERVICE {
     background-color: #000000;
@@ -468,7 +485,7 @@ html {
     transition: all .4s ease;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1080px) {
     .animate {
         grid-template-columns: repeat(3, 1fr);
     }
