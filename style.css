@@ -48,6 +48,15 @@ html {
     /* align-items: center; */
     /* justify-content: center; */
     padding: 40px 80px;
+    position: relative;
+    top: 0;
+}
+
+.banner-grid-row>div:nth-child(1)>img {
+    position: absolute;
+    top: -85px;
+    left: -35px;
+    transform: rotate(197deg);
 }
 
 .banner-grid-row>div>h1 {
@@ -242,6 +251,13 @@ html {
 /* Benefits css starts here */
 .dark-bg {
     background-color: #000;
+    position: relative;
+    top: 0;
+}
+
+.dark-bg>img:last-child {
+    position: absolute;
+    top: 0;
 }
 
 
@@ -251,7 +267,7 @@ html {
 }
 
 .erp-products {
-    padding: 40px 0px !important;
+    padding: 0px 0px 60px 0px !important;
 }
 
 @media screen and (max-width: 1080px) {
@@ -266,10 +282,22 @@ html {
     z-index: 9999;
     font-family: 'Montserrat';
     font-size: 48px;
+    display: inline-block;
+    position: relative;
     font-weight: 800;
 }
 
-
+.gradient-heading-bg h3::after {
+    content: "";
+    height: 6px;
+    width: 20%;
+    background-color: white;
+    position: absolute;
+    bottom: -.4em;
+    left: 50%;
+    border-radius: 50px;
+    transform: translate(-50%);
+}
 
 
 
@@ -325,6 +353,12 @@ html {
     color: #ffffff;
 }
 
+@media screen and (max-width: 598px) {
+    .gradient-heading-bg h3 {
+        font-size: 32px;
+    }
+}
+
 
 .step-title {
     color: #008cba;
@@ -375,7 +409,7 @@ html {
     }
 
     .gradient-heading-bg h2 {
-        font-size: 30px;
+        font-size: 32px;
     }
 }
 
@@ -400,21 +434,23 @@ html {
 
 .SERVICE {
     background-color: #000000;
-    padding: 220px 10px 100px 10px;
+    padding: 80px 10px 80px 10px;
     position: relative;
+    background-image: url('./Assets/Images/Footer img.png');
+    background-attachment: fixed;
+    background-size: cover;
 }
 
-.SERVICE::after {
-    background: url('./Assets/Images/bg-4.png') no-repeat scroll bottom center;
+/* .SERVICE::after {
+    background: url('./Assets/Images/Layer_1\ \(1\).png') no-repeat scroll bottom center;
     background-size: cover;
     content: "";
     height: 250px;
     width: 100%;
     position: absolute;
     top: 0;
-    /* filter: grayscale(100%); */
     opacity: 0.1;
-}
+} */
 
 
 .animate {
@@ -429,10 +465,17 @@ html {
 .st-iconbox {
     text-align: center;
     padding: 50px 20px;
-    border-radius: 20px;
+    border-radius: 10px;
     transition: all .4s ease;
     border: 1px solid #ffffff35;
     background-color: rgb(255 255 255 / 5%);
+}
+
+
+.st-iconbox:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .st-iconbox .iconbox-icon {
@@ -451,6 +494,7 @@ html {
 .st-iconbox:hover .iconbox-icon {
     border: .5px solid #fec544;
 }
+
 
 .st-iconbox:hover .iconbox-icon img {
     filter: grayscale(0);
@@ -480,7 +524,8 @@ html {
 }
 
 
-.st-iconbox:hover h3 {
+.st-iconbox:hover h3,
+.st-iconbox:hover p {
     color: #fec544;
     transition: all .4s ease;
 }
@@ -489,10 +534,13 @@ html {
     .animate {
         grid-template-columns: repeat(3, 1fr);
     }
+    .SERVICE{
+        margin-top: 70px;
+    }
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
     .animate {
         grid-template-columns: repeat(2, 1fr);
     }
