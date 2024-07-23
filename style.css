@@ -696,6 +696,15 @@ html {
     margin-bottom: 40px;
 }
 
+.easy-area__content>h3::before {
+    display: inline-block;
+    content: "";
+    border-top: .3rem solid white;
+    width: 15%;
+    margin: 0 1rem;
+    transform: translateY(-1rem);
+}
+
 .easy_sect {
     margin-left: 80px;
 }
