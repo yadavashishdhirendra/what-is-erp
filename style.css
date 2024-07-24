@@ -288,7 +288,7 @@ html {
     text-transform: uppercase;
 }
 
-.gradient-heading-bg h3::after {
+/* .gradient-heading-bg h3::after {
     content: "";
     height: 6px;
     width: 20%;
@@ -299,7 +299,7 @@ html {
     border-radius: 50px;
     transform: translate(-50%);
 }
-
+ */
 
 
 .gradient-heading-bg:before {
@@ -440,7 +440,45 @@ html {
     background-image: url('./Assets/Images/Footer img.png');
     background-attachment: fixed;
     background-size: cover;
+    position: relative;
+    top: 0;
 }
+
+.cirlce-row {
+    width: 400px;
+    height: 61px;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: -160px;
+    transform: rotate(30deg);
+    /* z-index: 99999999; */
+    border-radius: 50px;
+}
+
+@media screen and (max-width: 1080px) {
+    .cirlce-row {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .cirlce-row {
+        display: none;
+    }
+}
+
+/* .circle-right-row {
+    width: 440px;
+    height: 80px;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    right: -160px;
+    transform: rotate(-30deg);
+    z-index: 99999999;
+    border-radius: 50px;
+} */
 
 /* .SERVICE::after {
     background: url('./Assets/Images/Layer_1\ \(1\).png') no-repeat scroll bottom center;
@@ -762,3 +800,113 @@ html {
 }
 
 /* Future & modern css ends here */
+
+
+.erp-text {
+    color: #004dff;
+    border-bottom: 3px solid #004dff;
+    padding-bottom: 0px;
+}
+
+
+/* History Component container css starts here */
+.history-wrapper-container {
+    position: relative;
+    top: 0;
+}
+
+.history-wrapper-container>img {
+    position: absolute;
+    top: 0;
+    right: -100px;
+}
+
+.history-container {
+    max-width: 1400px;
+    padding: 0px 20px 0px 20px;
+    margin: 5rem auto 0rem auto;
+}
+
+.history-container>p {
+    font-family: 'Poppins';
+    margin-top: 0px;
+    font-size: 16px;
+}
+
+.history-row-grid>div>h4,
+p {
+    color: white;
+    font-family: 'Poppins';
+}
+
+.history-row-grid>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.history-row-grid>div>p:nth-child(1) {
+    color: #004dff;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.history-row-grid>div>p:nth-child(3),
+.history-row-grid>div>p:nth-child(4) {
+    margin-bottom: 1rem;
+    font-size: 16px;
+}
+
+.history-row-grid>div>p:nth-child(4) {}
+
+.history-row-grid>div>h4 {
+    text-transform: uppercase;
+    font-size: 42px;
+    text-align: right;
+    margin-bottom: 2rem;
+}
+
+
+.history-row-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 50px;
+}
+
+.history-row-grid>div>img {
+    width: 100%;
+    margin-left: -75px;
+    animation: UpDown 3s linear infinite;
+}
+
+@keyframes UpDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .history-row-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0px;
+    }
+}
+
+@media screen and (max-width: 598px) {
+    .history-row-grid>div>h4 {
+        font-size: 26px;
+    }
+}
+
+/* History Component container css ends here */
