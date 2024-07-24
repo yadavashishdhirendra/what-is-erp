@@ -62,11 +62,11 @@ html {
 .banner-grid-row>div>h1 {
     font-size: 82px;
     color: white;
-    font-family: 'Montserrat';
+    font-family: 'Poppins';
 }
 
 .banner-grid-row>div>p {
-    font-family: 'Montserrat';
+    font-family: 'Poppins';
     font-size: 18px;
     color: white;
     line-height: 1.6195;
@@ -215,7 +215,7 @@ html {
         calc(var(--_i, -1)*-0.08em) .01em 2px #0004;
     outline-offset: .1em;
     transition: 0.3s;
-    font-family: 'Montserrat' !important;
+    font-family: 'Poppins' !important;
     font-size: 27px !important;
     padding: 10px 40px !important;
     display: flex !important;
@@ -278,13 +278,14 @@ html {
 
 .gradient-heading-bg h2,
 .gradient-heading-bg h3 {
-    color: #008cba;
+    color: white;
     z-index: 9999;
-    font-family: 'Montserrat';
+    font-family: 'Poppins';
     font-size: 48px;
     display: inline-block;
     position: relative;
     font-weight: 800;
+    text-transform: uppercase;
 }
 
 .gradient-heading-bg h3::after {
@@ -362,7 +363,7 @@ html {
 
 .step-title {
     color: #008cba;
-    font-family: 'Montserrat';
+    font-family: 'Poppins';
     font-weight: 800;
     font-size: 24px;
 }
@@ -370,7 +371,7 @@ html {
 .clearfix p {
     color: #ffffff;
     font-size: 16px;
-    font-family: 'Montserrat';
+    font-family: 'Poppins';
     margin-top: 10px;
 }
 
@@ -378,7 +379,7 @@ html {
     color: #ffffff;
     font-size: 16px;
     margin-top: 10px;
-    font-family: 'Montserrat';
+    font-family: 'Poppins';
 }
 
 .clearfixs {
@@ -514,12 +515,12 @@ html {
     font-weight: 700;
     color: #fdfeff;
     margin-bottom: 10px;
-    font-family: 'Montserrat';
+    font-family: 'Poppins';
 }
 
 .st-iconbox p {
     font-size: 14px;
-    font-family: 'Montserrat';
+    font-family: 'Poppins';
     color: #fdfeff;
 }
 
@@ -676,24 +677,25 @@ html {
     color: #ffffff;
     font-weight: 700;
     margin-bottom: 10px;
-    font-family: 'Montserrat';
+    font-family: 'Poppins';
 }
 
 .easy-area__content-single__inner p {
     font-size: 14px;
     color: #ffffff;
     font-weight: 400;
-    font-family: 'Montserrat';
+    font-family: 'Poppins';
     margin-bottom: 15px;
 }
 
 .easy-area__content h3 {
     font-size: 42px;
-    font-family: 'Montserrat';
+    font-family: 'Poppins';
     color: #ffffff;
     font-weight: 900;
     letter-spacing: 0.5px;
     margin-bottom: 40px;
+    text-transform: uppercase;
 }
 
 .easy-area__content>h3::before {
