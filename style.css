@@ -26,7 +26,7 @@ html {
 
 .banner-grid-row {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
 }
 
@@ -125,7 +125,7 @@ html {
 
 @media screen and (max-width: 992px) {
     .banner-grid-row {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 }
 
@@ -942,7 +942,6 @@ p {
     background-color: white;
     /* height: 600px; */
     padding: 100px 50px;
-    border-top-left-radius: 10px;
     position: relative;
     top: 0;
     overflow: hidden;
@@ -1124,6 +1123,7 @@ p {
 .contact-us-button-container {
     position: relative;
     top: 0;
+    z-index: 9999;
 }
 
 
@@ -1140,6 +1140,7 @@ p {
     .contact-us-grid-row>div:nth-child(2) {
         padding: 40px 20px;
     }
+
     .contact-us-grid-row>div:nth-child(2)>img {
         bottom: -15px;
         left: 0;
@@ -1150,6 +1151,7 @@ p {
     .contact-us-grid-row {
         grid-template-columns: repeat(1, 1fr);
     }
+
     .contact-us-grid-row>div:nth-child(2)>img {
         bottom: -15px;
         left: 90px;
@@ -1190,11 +1192,13 @@ p {
         grid-template-columns: repeat(1, 1fr);
         gap: 20px;
     }
+
     .contact-us-grid-row>div:nth-child(2)>img {
         bottom: 15px;
         left: 0px;
     }
 }
+
 
 
 @media screen and (min-width: 1700px) {
@@ -1254,3 +1258,86 @@ p {
 
 /* Form component ends here */
 /* Contact us component ends here */
+
+
+/* Carousel component starts here */
+.carousel-container>div:nth-child(1) {
+    max-width: 100%;
+    margin: auto;
+}
+
+.carousel-container {
+    margin-top: 40px;
+}
+
+
+.slick-row>div {
+    background-color: rgba(50, 50, 93, 0.25);
+    color: white;
+    border-radius: 20px;
+    /* padding: 30px 40px; */
+}
+
+.slick-slide>div>div {
+    padding: 20px 60px;
+}
+
+.oem-certified>div>img {
+    width: 200px;
+    /* border-radius: 500px; */
+}
+
+.oem-certified>p:nth-child(1){
+    font-family: 'Poppins';
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1.30;
+    margin-bottom: 20px;
+}
+
+.oem-certified>p:last-child{
+    font-size: 16px;
+    font-family: 'Poppins';
+    text-align: center;
+    margin-top: 20px;
+}
+
+.oem-certified>div {
+    background-color: #2D94F0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: fit-content;
+    margin: auto;
+}
+
+.small-sz{
+    width: 100px !important;
+}
+
+.small-szx{
+    width: 120px !important;
+}
+/* Carousel component css ends here */
+
+
+@media screen and (max-width: 1368px) {
+    .banner-grid-row>div>h1{
+        font-size: 62px;
+    }
+}
+
+@media screen and (max-width: 598px) {
+    .oem-certified>p:nth-child(1){
+        font-size: 28px;
+    }
+    .slick-slide>div>div{
+        padding: 20px 20px;
+    }
+    .banner-grid-row>div>h1{
+        line-height: 1.1;
+    }
+}
