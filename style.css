@@ -860,7 +860,7 @@ p {
     font-size: 16px;
 }
 
-.history-row-grid>div>p:nth-child(4) {}
+/* .history-row-grid>div>p:nth-child(4) {} */
 
 .history-row-grid>div>h4 {
     text-transform: uppercase;
